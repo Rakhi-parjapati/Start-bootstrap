@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>bootstrap full course</title>
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            .logo {
+                width: 50px;
+            }
+            .bg-lightblue {
+                background-color: #eef4ff;
+            }
+            .hover {
+                text-decoration: none;
+                color: black;
+            }
+            .hover:hover {
+                color: black;
+                text-decoration: underline;
+            }
+            .input-accent {
+                accent-color: red;
+            }
+            .fs-small {
+                font-size: 12px;
+            }
+            .size {
+                font-size: 14px;
+            }
+            .my-box {
+                transition: transform 0.3s ease;
+            }
+
+            .my-box:hover {
+                transform: translateY(-5px);
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <div class=" shadow sticky-top">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand fw-semibold" href="#"><img class="logo" src="./images/sb-logo.svg" alt /> Start Bootstrap</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <!-- <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Themes</a>
+         </li>0
+         <li class="nav-item">
+          <a class="nav-link" href="#">Templates</a>
+         </li> -->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle size fw-semibold text-secondary" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Themes </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><hr class="dropdown-divider" /></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle size fw-semibold text-secondary" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Templates </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><hr class="dropdown-divider" /></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </li>
+                                .
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle size fw-semibold text-secondary" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Bundles </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><hr class="dropdown-divider" /></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled size fw-semibold text-secondary" href="#" tabindex="-1" aria-disabled="true">Forms</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle size fw-semibold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Resources </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><hr class="dropdown-divider" /></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <form class="d-flex gap-3 align-items-center">
+                                <a href class="text-decoration-none text-dark">Blog</a>
+                                <button class="btn btn-danger fs-small" type="submit ">Log In</button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="bg-lightblue ">
+            <div class="container py-4">
+                <div class="row py-5">
+                    <div class="col-12 col-lg-7">
+                        <div>
+                            <h1>Bootstrap themes, templates, and UI tools to help you <span class="text-danger">start your next project!</span></h1>
+                            <p class="text-muted">
+                                Start Bootstrap creates free, open source, MIT license, Bootstrap <span> <a href class="hover">themes, templates,</a></span> and <span><a href class="hover">code snippets</a></span> for you to use on any project, <span><a href class="hover">guides</a></span> to help you learn more about designing and developing with the Bootstrap framework, and
+                                <span><a href class="hover">premium Bootstrap UI products.</a></span>
+                            </p>
+                            <button class="btn btn-danger p-2">Browse Templates & Themes</button>
+                        </div>
+                    </div>
+                    <div class="offset-2 offset-lg-0 col-8 col-lg-5">
+                        <img src="./images/1images.svg" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12  col-lg-6">
+                    <div>
+                        <span class="text-muted fs-small fst-italic">Category</span>
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-light dropdown-toggle fs-small shadow" data-bs-toggle="dropdown">All</button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Link 1</a></li>
+                                <li><a class="dropdown-item" href="#">Link 2</a></li>
+                                <li><a class="dropdown-item" href="#">Link 3</a></li>
+                                <li><a class="dropdown-item-text" href="#">Text Link</a></li>
+                                <li><span class="dropdown-item-text">Just Text</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 d-lg-flex gap-3 justify-content-lg-end">
+                    <div>
+                        <span class="fs-small fst-italic">Technologies</span>
+                        <div class="input-accent">
+                            <div class="btn-group shadow" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-light fs-small d-flex gap-2 button-hover">
+                                    <input type="checkbox" />
+                                    HTML
+                                </button>
+                                <button type="button" class="btn btn-light fs-small d-flex gap-2"><input type="checkbox" />Angular</button>
+                                <button type="button" class="btn btn-light fs-small d-flex gap-2"><input type="checkbox" />Vue</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="fs-small fst-italic">Price</span>
+                        <div class="input-accent">
+                            <div class="btn-group fs-small shadow" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-light fs-small d-flex gap-2"><input type="checkbox" />HTML</button>
+                                <button type="button" class="btn btn-light fs-small d-flex gap-2"><input type="checkbox" />Angular</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <hr />
+            </div>
+            <div class="row row-cols-lg-3 row-col-sm-1 g-4">
+                <div class="col">
+                    <div>
+                        <img class="w-100 shadow rounded-3 my-box" src="./images/2nd.jpg" alt="" />
+
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-semibold">Material Admin Pro</span>
+                                <span class="alert alert-primary px-2 py-0 mb-0 fs-small">Pro</span>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between">
+                                    <span>A premium Bootstrap admin theme</span>
+                                    <span><i class="fa-solid fa-download"></i>818</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div>
+                        <img class="w-100 shadow rounded-3 my-box" src="./images/4th.jpg" alt="" />
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">SB Admin Pro</span>
+                                <span class="alert alert-primary px-2 py-0 mb-0 fs-small">Pro</span>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between">
+                                    <span>A premium Bootstrap admin theme</span>
+                                    <span><i class="fa-solid fa-download"></i>5,423</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <img class="w-100 shadow rounded-3 my-box" src="./images/3rd.jpg" alt="" />
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">SB Admin 2</span>
+                                <span class="alert alert-success px-2 py-0 mb-0 fs-small">Free</span>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between">
+                                    <span>A premium Bootstrap admin theme</span>
+                                    <span><i class="fa-solid fa-download"></i>2,539,730</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <img class="w-100 shadow rounded-3 my-box" src="./images/5th.jpg" alt="" />
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">Personal</span>
+                                <span class="alert alert-success px-2 py-0 mb-0 fs-small">Free</span>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between">
+                                    <span>A personal website theme</span>
+                                    <span><i class="fa-solid fa-download"></i>5,423</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <img class="w-100 shadow rounded-3 my-box" src="./images/6th.jpg" alt="" />
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">SB UI Kit Pro</span>
+                                <span class="alert alert-primary px-2 py-0 mb-0 fs-small">Pro</span>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between">
+                                    <span>A premium Bootstrap UI Kit</span>
+                                    <span><i class="fa-solid fa-download"></i>2,481</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <img class="w-100 shadow rounded-3 my-box" src="./images/7th.jpg" alt="" />
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">SB Admin</span>
+                                <span class="alert alert-success px-2 py-0 mb-0 fs-small">Free</span>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between">
+                                    <span>A free Bootstrap admin template</span>
+                                    <span><i class="fa-solid fa-download"></i>1,465,125</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <img class="w-100 shadow rounded-3 my-box" src="./images/8th.jpg" alt="" />
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">Freelancer</span>
+                                <span class="alert alert-success px-2 py-0 mb-0 fs-small">Free</span>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between">
+                                    <span>A one page freelancer theme</span>
+                                    <span><i class="fa-solid fa-download"></i>1,232,558</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <img class="w-100 shadow rounded-3 my-box" src="./images/9th.jpg" alt="" />
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">Agency</span>
+                                <span class="alert alert-primary px-2 py-0 mb-0 fs-small">Pro</span>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between">
+                                    <span>A premium Bootstrap admin theme</span>
+                                    <span><i class="fa-solid fa-download"></i>5,423</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <img class="w-100 shadow rounded-3 my-box" src="./images/10th.jpg" alt="" />
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">SB Admin Pro</span>
+                                <span class="alert alert-primary px-2 py-0 mb-0 fs-small">Pro</span>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between">
+                                    <span>A premium Bootstrap admin theme</span>
+                                    <span><i class="fa-solid fa-download"></i>5,423</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <img class="w-100 shadow rounded-3 my-box" src="./images/11th.jpg" alt="" />
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">SB Admin Pro</span>
+                                <span class="alert alert-primary px-2 py-0 mb-0 fs-small">Pro</span>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between">
+                                    <span>A premium Bootstrap admin theme</span>
+                                    <span><i class="fa-solid fa-download"></i>5,423</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <img class="w-100 shadow rounded-3 my-box" src="./images/12th.jpg" alt="" />
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">SB Admin Pro</span>
+                                <span class="alert alert-primary px-2 py-0 mb-0 fs-small">Pro</span>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between">
+                                    <span>A premium Bootstrap admin theme</span>
+                                    <span><i class="fa-solid fa-download"></i>5,423</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <img class="w-100 shadow rounded-3 my-box" src="./images/13th.jpg" alt="" />
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">SB Admin Pro</span>
+                                <span class="alert alert-primary px-2 py-0 mb-0 fs-small">Pro</span>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between">
+                                    <span>A premium Bootstrap admin theme</span>
+                                    <span><i class="fa-solid fa-download"></i>5,423</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <img class="w-100 shadow rounded-3 my-box" src="./images/15th.jpg" alt="" />
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">SB Admin Pro</span>
+                                <span class="alert alert-primary px-2 py-0 mb-0 fs-small">Pro</span>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between">
+                                    <span>A premium Bootstrap admin theme</span>
+                                    <span><i class="fa-solid fa-download"></i>5,423</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <img class="w-100 shadow rounded-3 my-box" src="./images/16th.jpg" alt="" />
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">SB Admin Pro</span>
+                                <span class="alert alert-primary px-2 py-0 mb-0 fs-small">Pro</span>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between">
+                                    <span>A premium Bootstrap admin theme</span>
+                                    <span><i class="fa-solid fa-download"></i>5,423</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <img class="w-100 shadow rounded-3 my-box" src="./images/17th.jpg" alt="" />
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">SB Admin Pro</span>
+                                <span class="alert alert-primary px-2 py-0 mb-0 fs-small">Pro</span>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between">
+                                    <span>A premium Bootstrap admin theme</span>
+                                    <span><i class="fa-solid fa-download"></i>5,423</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <img class="w-100 shadow rounded-3 my-box" src="./images/18th.jpg" alt="" />
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">SB Admin Pro</span>
+                                <span class="alert alert-primary px-2 py-0 mb-0 fs-small">Pro</span>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between">
+                                    <span>A premium Bootstrap admin theme</span>
+                                    <span><i class="fa-solid fa-download"></i>5,423</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <img class="w-100 shadow rounded-3 my-box" src="./images/19th.jpg" alt="" />
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">SB Admin Pro</span>
+                                <span class="alert alert-primary px-2 py-0 mb-0 fs-small">Pro</span>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between">
+                                    <span>A premium Bootstrap admin theme</span>
+                                    <span><i class="fa-solid fa-download"></i>5,423</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <img class="w-100 shadow rounded-3 my-box" src="./images/20th.jpg" alt="" />
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">SB Admin Pro</span>
+                                <span class="alert alert-primary px-2 py-0 mb-0 fs-small">Pro</span>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between">
+                                    <span>A premium Bootstrap admin theme</span>
+                                    <span><i class="fa-solid fa-download"></i>5,423</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <img class="w-100 shadow rounded-3 my-box" src="./images/21th.jpg" alt="" />
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">SB Admin Pro</span>
+                                <span class="alert alert-primary px-2 py-0 mb-0 fs-small">Pro</span>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between">
+                                    <span>A premium Bootstrap admin theme</span>
+                                    <span><i class="fa-solid fa-download"></i>5,423</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <img class="w-100 shadow rounded-3 my-box" src="./images/22th.jpg" alt="" />
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">SB Admin Pro</span>
+                                <span class="alert alert-primary px-2 py-0 mb-0 fs-small">Pro</span>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between">
+                                    <span>A premium Bootstrap admin theme</span>
+                                    <span><i class="fa-solid fa-download"></i>5,423</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <img class="w-100 shadow rounded-3 my-box" src="./images/23th.jpg" alt="" />
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">SB Admin Pro</span>
+                                <span class="alert alert-primary px-2 py-0 mb-0 fs-small">Pro</span>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between">
+                                    <span>A premium Bootstrap admin theme</span>
+                                    <span><i class="fa-solid fa-download"></i>5,423</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <img class="w-100 shadow rounded-3 my-box" src="./images/24th.jpg" alt="" />
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">SB Admin Pro</span>
+                                <span class="alert alert-primary px-2 py-0 mb-0 fs-small">Pro</span>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between">
+                                    <span>A premium Bootstrap admin theme</span>
+                                    <span><i class="fa-solid fa-download"></i>5,423</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <img class="w-100 shadow rounded-3 my-box" src="./images/25th.jpg" alt="" />
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">SB Admin Pro</span>
+                                <span class="alert alert-primary px-2 py-0 mb-0 fs-small">Pro</span>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between">
+                                    <span>A premium Bootstrap admin theme</span>
+                                    <span><i class="fa-solid fa-download"></i>5,423</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <img class="w-100 shadow rounded-3 my-box" src="./images/26th.jpg" alt="" />
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">SB Admin Pro</span>
+                                <span class="alert alert-primary px-2 py-0 mb-0 fs-small">Pro</span>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between">
+                                    <span>A premium Bootstrap admin theme</span>
+                                    <span><i class="fa-solid fa-download"></i>5,423</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <img class="w-100 shadow rounded-3 my-box" src="./images/27th.jpg" alt="" />
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">SB Admin Pro</span>
+                                <span class="alert alert-primary px-2 py-0 mb-0 fs-small">Pro</span>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between">
+                                    <span>A premium Bootstrap admin theme</span>
+                                    <span><i class="fa-solid fa-download"></i>5,423</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <img class="w-100 shadow rounded-3 my-box" src="./images/28th.jpg" alt="" />
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">SB Admin Pro</span>
+                                <span class="alert alert-primary px-2 py-0 mb-0 fs-small">Pro</span>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between">
+                                    <span>A premium Bootstrap admin theme</span>
+                                    <span><i class="fa-solid fa-download"></i>5,423</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <img class="w-100 shadow rounded-3 my-box" src="./images/29th.jpg" alt="" />
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">SB Admin Pro</span>
+                                <span class="alert alert-primary px-2 py-0 mb-0 fs-small">Pro</span>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between">
+                                    <span>A premium Bootstrap admin theme</span>
+                                    <span><i class="fa-solid fa-download"></i>5,423</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-lightblue mt-5">
+            <div class="container">
+                <div class="card shadow p-2 pb-0 rounded-3">
+                    <div class="row">
+                        <!-- Left side text -->
+                        <div class="col-lg-9 p-5 m-0">
+                            <div class=" h3">Want more Bootstrap themes, templates, and UI tools?</div>
+
+                            <p class="text-secondary">Subscribe to get updated when new Bootstrap related products arrive!</p>
+
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control" placeholder="Email address..." />
+
+                                <button class="btn btn-danger">Subscribe!</button>
+                            </div>
+
+                            <small class="text-secondary fst-italic fs-small"> This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply. </small>
+                        </div>
+
+                        <!-- Right side image -->
+                        <div class="col-lg-3 d-none d-lg-block text-center overflow-hidden" style="height: 250px;">
+                            <img src="./images/wall-post-pana.svg" class="img-fluid w-50 " alt="Illustration" />
+                        </div>
+                    </div>
+                </div>
+                <footer class="row mt-5">
+                    <div class=" col col-lg-3">
+                        <div>
+                            <h5>Start Bootstrap</h5>
+                            <span class="size">Free & premium UI tools to help you build better websites</span>
+                            <div class="mt-3">
+                                <i class="fa-brands fa-twitter text-secondary fs-3"></i>
+                                <i class="fa-brands fa-github text-secondary fs-3"></i>
+                                <i class="fa-brands fa-facebook text-secondary fs-3"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div>
+                            <span class="fw-bold text-secondary size">PRODUCTS</span>
+                            <ul class="text-secondary list-unstyled size mt-3 d-flex flex-column gap-2">
+                                <li class="hover">Themes</li>
+                                <li class="hover">Templates</li>
+                                <li class="hover">Snippets</li>
+                                <li class="hover">Guides</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div>
+                            <span class="fw-bold text-secondary size">COMPANY</span>
+                            <ul class="text-secondary list-unstyled size mt-3 d-flex flex-column gap-2">
+                                <li class="hover">Blog</li>
+                                <li class="hover">Bootstrap Resources</li>
+                                <li class="hover">SB Angular Inspector</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div>
+                            <span class="fw-bold text-secondary size">RESOURCES</span>
+                            <ul class="text-secondary list-unstyled size mt-3 d-flex flex-column gap-2">
+                                <li class="hover">Support</li>
+                                <li class="hover">Knowledge Base</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div>
+                            <span class="fw-bold text-secondary size">SUPPORT</span>
+                            <ul class="text-secondary list-unstyled size mt-3 d-flex flex-column gap-2">
+                                <li class="hover">Company</li>
+                                <li class="hover">About Us</li>
+                                <li class="hover">Privacy Policy</li>
+                                <li class="hover">Guides</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <hr />
+                    </div>
+                    <div class="p-4 text-secondary d-flex justify-content-between">
+                        <p class="m-0">Copyright © 2026 Rakhi. All Rights Reserved.</p>
+                        <small>Website designed and developed by Rakhi.</small>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>
